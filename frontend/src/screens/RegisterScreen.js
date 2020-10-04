@@ -12,7 +12,7 @@ const [name,setName] = useState("")
   const Register = useSelector(state => state.Register)
   const { loading, userInfo, error } = Register
   const dispatch = useDispatch()
-
+  const redirect = props.location.search?props.location.search.split("=")[1]: "/"
   useEffect(() => {
    if(userInfo){
      props.history.push("/")
@@ -66,7 +66,7 @@ const [name,setName] = useState("")
           </button>
         </li>
         <li>
-          <Link to="/register" className="button secondary text-center">
+          <Link to={redirect === "/" ? "signin" : "signin?register" + redirect} className="button secondary text-center">
           Sign In
           </Link>
         </li>

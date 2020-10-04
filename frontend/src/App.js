@@ -4,8 +4,13 @@ import './App.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import HomeScreen from "./screens/HomeScreen"
 import SigninScreen from "./screens/SigninScreen"
+import ShippingScreen from "./screens/ShippingScreen"
+import ProductsScreen from "./screens/ProductsScreen"
 import ProductScreen from "./screens/ProductScreen"
 import CartScreen from "./screens/CartScreen"
+import PaymentScreen from "./screens/PaymentScreen"
+import PlaceOrderScreen from "./screens/PlaceOrderScreen"
+import ProductsScreen from "./screens/ProductsScreen"
 import RegisterScreen from "./screens/RegisterScreen"
 
 function App() {
@@ -54,7 +59,11 @@ function App() {
         </aside>
         <main className="main">
            <div className="content">
+               <Route path="/shipping" component={ShippingScreen}/>
                <Route path="/signin" component={SigninScreen}/>
+               <Route path="/products" component={ProductsScreen}/>
+               <Route path="/payment" component={PaymentScreen}/>
+               <Route path="/placeorder" component={PlaceOrderScreen}/>
                <Route path="/register" component={RegisterScreen}/>
               <Route path="/products/:id" exact component={ProductScreen}/>
               <Route path="/cart/:id?" component={CartScreen} />

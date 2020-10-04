@@ -2,7 +2,7 @@ import React ,{ useEffect } from "react"
 import data from "../data"
 import {useSelector} from "react-redux"
 import {Link} from "react-router-dom"
-import { detailsProduct } from "../actions/productActions"
+import { detailsProduct, deleteProduct } from "../actions/productActions"
 import { useEffect } from "react"
 
 
